@@ -28,4 +28,16 @@ config.window_frame = {
 config.enable_scroll_bar = true
 config.mouse_wheel_scrolls_tabs = false
 
+config.keys = {
+  -- This will create a new split and run your default program inside it
+  {
+    key = '%',
+    mods = 'CTRL|SHIFT|',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+}
+
+
+
+
 return config
