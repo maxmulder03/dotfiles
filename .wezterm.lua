@@ -25,6 +25,9 @@ config.window_frame = {
   inactive_titlebar_bg = '#333333',
 }
 
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
+config.tab_and_split_indeces_are_zero_based = true
 config.enable_scroll_bar = true
 config.mouse_wheel_scrolls_tabs = false
 
