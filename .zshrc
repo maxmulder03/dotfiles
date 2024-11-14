@@ -4,8 +4,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -42,11 +40,3 @@ function gmm() {
 alias gazz="git add config/adv360.keymap; git add config/macros.dtsi" # failing 1 or both commands is ok
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
