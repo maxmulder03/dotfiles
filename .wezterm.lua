@@ -4,14 +4,14 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
--- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Banana Blueberry"
 -- config.color_scheme = "arcoiris"
 -- config.color_scheme = "duskfox"
 -- config.color_scheme = "rose-pine"
-config.window_background_opacity = 0.90
-config.color_scheme = "kanagawabones"
+config.window_background_opacity = 0.8
+-- config.color_scheme = "kanagawabones"
 config.font = wezterm.font "JetBrains Mono"
 config.colors = {
   scrollbar_thumb = '444861'
@@ -27,7 +27,7 @@ config.window_frame = {
 
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
-config.tab_and_split_indeces_are_zero_based = true
+config.tab_and_split_indices_are_zero_based = true
 config.enable_scroll_bar = true
 config.mouse_wheel_scrolls_tabs = false
 

@@ -18,5 +18,10 @@ require('kanagawa-paper').setup({
   end,
 })
 
--- setup must be called before loading
+require("catppuccin").setup({
+  transparent_background = true,
+})
+
+-- setup must be called before loading colorschemes
 vim.cmd("colorscheme kanagawa-paper")
+-- vim.cmd("colorscheme catppuccin")

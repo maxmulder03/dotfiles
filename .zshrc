@@ -16,7 +16,8 @@ plugins=(git aws docker asdf)
 source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
-alias vimdot="cd ~/dotfiles/ && nvim ."
+alias vimdot="cd ~/dotfiles/ && nvim . && cd -"
+alias notes="cd ~/notes && nvim . && cd -"
 
 # LS Shortcuts
 alias lsl="ls -1AF"
