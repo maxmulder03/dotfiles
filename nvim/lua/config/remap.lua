@@ -12,7 +12,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Search terms stay in the middle 
+-- Search terms stay in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -20,11 +20,14 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- super yank copy to outside clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+-- super yank entire file to outside clipboard
+vim.keymap.set("n", "<leader>yf", 'ggVG"+y')
+
+--
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- find and replace the word youre on!
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -41,5 +44,3 @@ vim.keymap.set("n", "<leader>xj", "<C-w>k<C-w>h")
 vim.keymap.set("n", "<leader>xk", "<C-w>k<C-w>l")
 vim.keymap.set("n", "<leader>xl", "<C-w>j<C-w>h")
 vim.keymap.set("n", "<leader>x;", "<C-w>j<C-w>l")
-
-
