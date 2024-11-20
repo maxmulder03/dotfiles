@@ -10,7 +10,9 @@ return {
 		require("mini.animate").setup({
 			cursor = { enable = false },
 			resize = { enable = false },
+			scroll = { enable = false },
 			open = { enable = false },
+			close = { enable = false },
 		})
 
 		require("mini.icons").setup()
