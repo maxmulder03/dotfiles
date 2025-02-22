@@ -9,7 +9,7 @@ config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "arcoiris"
 -- config.color_scheme = "duskfox"
 -- config.color_scheme = "rose-pine"
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1.0
 -- config.color_scheme = "kanagawabones"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.colors = {
@@ -29,6 +29,15 @@ config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = false
 config.enable_scroll_bar = true
 config.mouse_wheel_scrolls_tabs = false
+
+-- Shortcut to modify current command in nvim
+config.keys = {
+	{
+		key = "E",
+		mods = "CTRL",
+		action = wezterm.action({ SendString = "fc\n" }),
+	},
+}
 
 config.keys = {
 	-- This will create a new split and run your default program inside it
