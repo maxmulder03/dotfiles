@@ -33,7 +33,7 @@ return {
 			vim.keymap.set("n", "<leader>pp", builtin.keymaps, {})
 			vim.keymap.set("n", "<leader>pt", builtin.tags, {})
 			vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>pr", builtin.grep_string, {})
+			vim.keymap.set("n", "<leader>pr", builtin.grep_string, {}) --- exec grep with cursor as arg
 			vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>ps", function()
 				builtin.grep_string({ search = vim.fn.input("Grep >") })

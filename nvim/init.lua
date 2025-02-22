@@ -33,3 +33,5 @@ require("catppuccin").setup({
 
 require("todo-comments").setup()
 vim.cmd("colorscheme catppuccin")
+vim.cmd([[ hi Visual guibg=#042c2e ]])
+vim.cmd([[ hi LineNr guifg=#fffa9b ]])

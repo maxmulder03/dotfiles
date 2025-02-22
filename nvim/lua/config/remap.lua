@@ -45,3 +45,15 @@ vim.keymap.set("n", "<leader>gh", "<C-w>h")
 vim.keymap.set("n", "<leader>gj", "<C-w>j")
 vim.keymap.set("n", "<leader>gk", "<C-w>k")
 vim.keymap.set("n", "<leader>gl", "<C-w>l")
+
+local supermaven_enabled = true
+vim.keymap.set("n", "<leader>tg", ":lua ToggleSuperMaven()<CR>")
+
+function ToggleSuperMaven()
+	local supermaven_enabled = not supermaven_enabled
+	require("lazy").setup({
+		"supermaven-nvim",
+		enabled = supermaven_enabled,
+	})
+	vim.cmd("Lazy reload")
+end

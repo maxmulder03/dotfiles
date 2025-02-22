@@ -141,8 +141,11 @@ return {
 			-- ts_ls = {},
 			--
 
+			gopls = {},
 			swiftlint = {},
 			pyright = {},
+			emmet_language_server = {},
+			tailwindcss = {},
 
 			lua_ls = {
 				-- cmd = {...},
