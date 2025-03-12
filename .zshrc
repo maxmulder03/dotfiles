@@ -75,7 +75,7 @@ function mytree() {
       esac
   done
 
-  CMD="tree \"$CURRENT_DIR\" -I '.git|node_modules|build|dist|target|out|vendor|public|log|tmp|coverage|vendor|node_modules|bower_components|data|logs|tests|test|spec|features|coverage|public|storage|resources|database|cache|vendor|node_modules|bower_components|data|logs|tests|test|spec|features|coverage|public|storage|resources|database|cache|config|bin|include|lib|man|share|src|var|db|etc|fonts|icons|initrd|iso|lost+found|modules|mnt|opt|proc|root|run|sbin|srv|sys|tmp|usr|var'"
+  CMD="tree \"$CURRENT_DIR\" -I '.git|node_modules|build|target|out|vendor|log|vendor|node_modules|bower_components|data|logs|tests|test|spec|features|coverage|storage|cache|vendor|node_modules|bower_components|data|logs|tests|test|spec|features|coverage|public|storage|resources|database|cache|config|bin|include|lib|man|share|etc|fonts|icons|initrd|iso|lost+found|modules|mnt|opt|proc|root|sbin|srv|usr'"
 
   OUTPUT_DATA=$(eval "$CMD")
 
