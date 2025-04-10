@@ -28,10 +28,15 @@ require("catppuccin").setup({
 	transparent_background = true,
 })
 
+require("todo-comments").setup()
+
 -- setup must be called before loading colorschemes
 -- vim.cmd("colorscheme kanagawa-paper")
+vim.cmd("colorscheme catppuccin-frappe")
+-- vim.cmd("colorscheme catppuccin")
 
-require("todo-comments").setup()
-vim.cmd("colorscheme catppuccin")
+-- Light Themes
+-- vim.cmd("colorscheme rose-pine-dawn")
+
 vim.cmd([[ hi Visual guibg=#042c2e ]])
 vim.cmd([[ hi LineNr guifg=#fffa9b ]])

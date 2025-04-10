@@ -3,14 +3,25 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Catppuccin Mocha"
+-- Favorite Themes
+-- config.color_scheme = "Catppuccin Mocha" -- Dark
+config.color_scheme = "Catppuccin Frappe" -- Light(ish)
+-- config.color_scheme = "Sweet Love (terminal.sexy)"
+-- config.color_scheme = "Atelierdune (light) (terminal.sexy)"
+
+-- ***** DARK THEMES *****
 -- config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "Banana Blueberry"
 -- config.color_scheme = "arcoiris"
 -- config.color_scheme = "duskfox"
 -- config.color_scheme = "rose-pine"
-config.window_background_opacity = 1.0
 -- config.color_scheme = "kanagawabones"
+
+-- ***** LIGHT THEMES *****
+-- config.color_scheme = "rose-pine-dawn"
+
+config.window_background_opacity = 1.0
+
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.colors = {
 	scrollbar_thumb = "444861",
