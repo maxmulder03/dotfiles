@@ -16,7 +16,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker asdf)
+plugins=(git aws docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,7 +37,8 @@ cdt() {
 alias lsl="ls -1AF"
 alias lslt="ls -lt"
 alias lss="ls -lhAF" 
-#Easy Git
+
+################# Git Aliases #################
 alias gaa="git add ."
 alias gs="git status"
 # Pretty Git logging
@@ -46,11 +47,6 @@ alias glgg="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold 
 
 alias gitdump="find . -type f -not -path \"./.git/*\" -exec echo \"FILE: {}\" \; -exec cat {} \; > git_files_and_contents.txt"
 
-# Java
-alias grb="./gradlew build"
-alias grbr="./gradlew build && ./gradlew bootRun"
-
-
 function gitNumLines() {
     git ls-files | grep $1 | xargs wc -l 
 }
@@ -58,6 +54,13 @@ function gitNumLines() {
 function gmm() {
   git commit -m "$1"
 }
+##############################################
+
+# Java
+alias grb="./gradlew build"
+alias grbr="./gradlew build && ./gradlew bootRun"
+
+
 
 function mytree() {
   CURRENT_DIR=$(pwd)

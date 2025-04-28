@@ -115,22 +115,22 @@ config.keys = {
 	{
 		mods = "LEADER",
 		key = "LeftArrow",
-		action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+		action = wezterm.action.AdjustPaneSize({ "Left", 40 }),
 	},
 	{
 		mods = "LEADER",
 		key = "RightArrow",
-		action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+		action = wezterm.action.AdjustPaneSize({ "Right", 40 }),
 	},
 	{
 		mods = "LEADER",
 		key = "DownArrow",
-		action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+		action = wezterm.action.AdjustPaneSize({ "Down", 25 }),
 	},
 	{
 		mods = "LEADER",
 		key = "UpArrow",
-		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
+		action = wezterm.action.AdjustPaneSize({ "Up", 25 }),
 	},
 }
 
