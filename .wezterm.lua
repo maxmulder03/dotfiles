@@ -59,6 +59,26 @@ config.keys = {
 	},
 }
 
+-- TODO: AdjustPaneSize isn't working
+function pane_default_1()
+	return wezterm.action.Multiple({
+		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+		wezterm.action.ActivatePaneDirection("Right"),
+		wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+		wezterm.action.AdjustPaneSize({ "Right", 40 }),
+	})
+end
+
+-- TODO: Activate pane isn't working
+function pane_default_2()
+	return wezterm.action.Multiple({
+		wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+		wezterm.action.ActivatePaneDirection("Up"),
+		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	})
+end
+
 -- tmux-esq congig
 config.leader = { key = "g", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
@@ -131,6 +151,17 @@ config.keys = {
 		mods = "LEADER",
 		key = "UpArrow",
 		action = wezterm.action.AdjustPaneSize({ "Up", 25 }),
+	},
+	-- Pane Management Defaults
+	{
+		mods = "LEADER",
+		key = "a",
+		action = pane_default_1(),
+	},
+	{
+		mods = "LEADER",
+		key = "s",
+		action = pane_default_2(),
 	},
 }
 
