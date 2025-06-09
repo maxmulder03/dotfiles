@@ -29,6 +29,9 @@ require("catppuccin").setup({
 })
 
 require("todo-comments").setup()
+require("lualine").setup({
+	options = { theme = "powerline" },
+})
 
 -- setup must be called before loading colorschemes
 -- vim.cmd("colorscheme kanagawa-paper")
