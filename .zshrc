@@ -68,7 +68,7 @@ alias grbr="./gradlew build && ./gradlew bootRun"
 
 # Dirs
 function finddir() {
-  find . -type d -iname "*$1*"
+  find . -type d -iname "*$1*" | fzf
 }
 
 function mytree() {
