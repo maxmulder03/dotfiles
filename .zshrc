@@ -66,7 +66,10 @@ alias sshoak="ssh -i ~/.ssh/may-21-2025-oak-wilt.pem ubuntu@ec2-3-144-198-245.us
 alias grb="./gradlew build"
 alias grbr="./gradlew build && ./gradlew bootRun"
 
-
+# Dirs
+function finddir() {
+  find . -type d -iname "*$1*"
+}
 
 function mytree() {
   CURRENT_DIR=$(pwd)
