@@ -60,7 +60,7 @@ config.keys = {
 }
 
 -- TODO: AdjustPaneSize isn't working
-function pane_default_1()
+local function pane_default_1()
 	return wezterm.action.Multiple({
 		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 		wezterm.action.ActivatePaneDirection("Right"),
@@ -69,14 +69,23 @@ function pane_default_1()
 	})
 end
 
--- TODO: Activate pane isn't working
-function pane_default_2()
-	return wezterm.action.Multiple({
-		wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-		wezterm.action.ActivatePaneDirection("Up"),
-		wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	})
+local function pane_default_2()
+	return wezterm.action_callback(function(window, pane)
+		local top_left = pane
+		local top_right = top_left:split({
+			direction = "Right",
+			size = 0.25,
+		})
+		top_left:split({
+			direction = "Bottom",
+			size = 0.05,
+		})
+		top_right:split({
+			direction = "Bottom",
+			size = 0.05,
+		})
+		top_left:activate()
+	end)
 end
 
 -- tmux-esq congig
